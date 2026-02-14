@@ -111,6 +111,16 @@ header {
   border-bottom: 2px solid var(--clr-grey-light);
 }
 
+nav {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+nav a {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
 header h1 {
   font-size: var(--fs-800);
   font-weight: var(--fw-extra-bold );
@@ -119,7 +129,7 @@ header h1 {
 .about-section, 
 .portfolio-section, 
 .contact-section{
-  margin-bottom: 5rem;
+  margin-bottom: 0 1rem;
 }
 
 .about-content, 
@@ -166,5 +176,5 @@ footer {
   text-align: right;
   padding: 1rem;
   font-size: var(--fs-400);
-  background-color: hsl(210, 50%, 14%);
+  background-color: hsl(210, 50%, 12%);
 }
