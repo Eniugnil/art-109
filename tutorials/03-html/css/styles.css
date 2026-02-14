@@ -128,12 +128,25 @@ header h1 {
 .portfolio-item {
   margin-bottom: 5rem;
   background-color: var(--clr-secondary);
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem;
+  text-align: justify;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 4px var(--clr-primary);
+  border: 2px solid var(--clr-primary);
 }
 .portfolio-item img{
+  max-width: 100%;
   display: block;
   margin: auto;
+  border-radius: 1rem;
+}
+
+.portfolio-item h3 {
+  margin:  0.5rem 0;
+}
+
+.portfolio-item {
+  font-size: var(--fs-400);
 }
 
 /* .about-section {
@@ -141,5 +154,6 @@ header h1 {
 } */
 
 .portfolio-section {
+  padding: 2rem 0;
   background-color: hsl(210, 50%, 17%);
 }
