@@ -19,11 +19,13 @@
 
   --fw-regular: 400;
   --fw-bold: 700;
+  --fw-extra-bold: 800;
   --fw-black: 900;
-
+  
   --fs-400: 1.125rem;
   --fs-500: 1.5rem;
   --fs-700: 2rem;
+  --fs-800: 3rem;
   --fs-900: 5rem;
 }
 
@@ -88,13 +90,41 @@
     text-decoration: none;
     color: inherit;
 }
+/* 11. respect user font size preferences */
+html {
+  font-size: 100%;
+}
 
 /* general styling */
 body{
   font-family: var(--font-family-default);
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   color: var(--clr-white);
   background: var(--clr-primary);
 }
 
+header {
+  padding: 6rem;
+  /* margin-bottom: 3rem; */
+  background-color: var(--clr-secondary);
+  /* text-align: center; */
+  border-bottom: 2px solid var(--clr-grey-light);
+}
 
+header h1 {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-extra-bold );
+}
+
+main {
+  max-width: 60rem;
+  margin: 4rem auto;
+}
+
+.about-section, .portfolio-section, .contact-section{
+  margin-bottom: 5rem;
+}
+
+.portfolio-item {
+  margin-bottom: 5rem;
+}
