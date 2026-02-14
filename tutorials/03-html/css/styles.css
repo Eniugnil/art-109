@@ -116,11 +116,15 @@ header h1 {
   font-weight: var(--fw-extra-bold );
 }
 
-.about-section, .portfolio-section, .contact-section{
+.about-section, 
+.portfolio-section, 
+.contact-section{
   margin-bottom: 5rem;
 }
 
-.about-content, .portfolio-content, .contact-content {
+.about-content, 
+.portfolio-content, 
+.contact-content {
   max-width: 60rem;
   margin: 4rem auto;
 }
@@ -156,4 +160,11 @@ header h1 {
 .portfolio-section {
   padding: 2rem 0;
   background-color: hsl(210, 50%, 17%);
+}
+
+footer {
+  text-align: right;
+  padding: 1rem;
+  font-size: var(--fs-400);
+  background-color: hsl(210, 50%, 14%);
 }
