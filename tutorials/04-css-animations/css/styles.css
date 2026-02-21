@@ -1,0 +1,95 @@
+body {
+    animation: change-color 10s infinite alternate;
+}
+
+@keyframes change-color {
+    /* from {background-color: hsl(34, 78%, 91%);}
+    to {background-color: hsl(34, 78%, 100%);} */
+    0% {background-color: hsl(252, 40%, 78%);}
+    50% {background-color: hsl(252, 40%, 88%);}
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {transform: skew(0deg, 0deg);}
+    100% {transform: skew(10deg, 15deg);}
+}
+
+.square {
+    background-color: hsl(208, 100%, 87%);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin: 50px auto;
+    transition: all 1s;
+    /* transition: background-color 1s; */
+    /* transition: transform 1s; */
+}
+
+.square:hover {
+    background-color: hsl(208, 100%, 92%);
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    background-color: hsl(148, 95%, 44%);
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10%;
+    transition: all .5s;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: hsl(148, 95%, 59%);
+    transform: scale(1.1);
+    color: black;
+}
+
+
+
+.loading {
+    animation: stretch 1s infinite alternate;
+    background-color: hsl(180, 100%, 90%);
+}
+
+@keyframes stretch {
+    0% {width: 100px;}
+    100% {width: 80vw;}
+}
+
+.switch {
+    background-color: hsl(60, 100%, 52%);
+    width: 200px;
+    height: 200px;
+    transition: all 1s;
+}
+div .switch:hover {
+    transform: translate(200px);
+}
+
+.square-container {
+    background-color: hsl(0, 0%, 0%);
+    width: 400px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+div .square {
+    animation: spin 1s infinite ;
+}
+
+@keyframes spin {
+  to {transform: rotate(2turn);}
+}
