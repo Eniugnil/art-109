@@ -37,9 +37,7 @@ body{
 header {
   padding: 6rem;
   background-color: var(--bg-color-2);
-  /* text-align: center; */
   border-bottom: 2px solid hsl(210, 25%, 46%);
-  border-bottom: 2px solid hsl(0, 0%, 100%);
 }
 
 @media (max-width: 700px) {
@@ -98,12 +96,6 @@ main {
   } 
 }
 
-.about-section, 
-.portfolio-section, 
-.contact-section{
-  margin-bottom: 0 1rem;
-}
-
 .about-content, 
 .portfolio-content, 
 .contact-content {
@@ -121,12 +113,12 @@ main {
   font-size: 1.125rem;
 }
 
-@media (max-width: 800) {
+@media (max-width: 800px) {
   .portfolio-item {
     padding: 3rem;
   }
 }
-@media (max-width: 650) {
+@media (max-width: 650px) {
   .portfolio-item {
     padding: 2rem;
   }
