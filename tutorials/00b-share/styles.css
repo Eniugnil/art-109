@@ -1,0 +1,184 @@
+/* .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+} */
+  
+
+/* - Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    /* The font is 15, to get it the rem you divide the font size by 16 (15/16=0.9375) */
+    --fs-400: 0.9375rem;
+    --fs-500:1.25rem;
+    --fs-600: 1.625rem;
+    --fs-900: 2.5rem;
+    /* The lower the number the lighter, higher is darker. Similar to how fonts work*/
+    --clr-neutral-900: hsl(234, 12%, 34%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+
+    --clr-teal: hsl(180, 62%, 55%);
+    --clr-red: hsl(359, 79%, 62%);
+    --clr-blue: hsl(212, 84%, 63%);
+    --clr-yellow: hsl(34, 97%, 64%);
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Very common but its not needed in this project
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+img { Image reset
+    max-width: 100%;
+    display: block;
+} */
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+}
+
+body {
+    margin: 0;
+    padding-block-end: 5rem;
+}
+
+h1, h2, h3 { /* Line height is good for body and small fonts sizes but not large ones */
+    color: var(--clr-neutral-900);
+    line-height: 1.2;
+}
+
+.wrapper {
+    padding-inline: 2rem;
+    max-width: 1280px;
+    margin-inline: auto; /* Margin left and right. -inline means left and right */
+}
+
+.wrapper--narrow {
+    max-width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem; /* Margin top and bottom. -block is top and bottom.  */
+}
+
+h1 {
+    font-weight: var(--fw-light);
+    font-size: var(--fs-900);
+}
+h1 span {
+    font-weight: var(--fw-bold);
+}
+header > p {
+    font-size: var(--fs-500)
+}
+
+.layout-grid {
+    --gap: 2rem;
+    display: grid; /* Everything stacks by default on grid */
+    /* grid-auto-columns 1fr (Grid version)*/ 
+    gap: var(--gap);
+}
+
+@media (min-width: 800px) { /* For larger screens make it have three columns instead of 1 stacking column*/
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Grid Version */
+/* @media (min-width: 800px) {
+    .layout-grid {
+        grid-template-areas: 
+        "... two   ...."
+        "one two   four"
+        "one three four"
+        "... three ....";
+    }
+} */
+
+.layout-grid > * { /* The * makes it so you aren't forced to use the class names  */
+    flex: 1;
+}
+
+/* Not needed is grid version */
+.col {
+    display: grid;
+    align-content: center;
+    gap: var(--gap);
+}
+
+.card {
+    --br: 0.325rem;
+    padding: 2rem;
+    border-top: var(--br) solid; /* Border and border radius should match. Convert px to rem if needed (px/16)=#rem*/
+    border-radius: var(--br);
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15); /* Using pixels for box shadows is good too. You're just going to have to eyeball the box shadows*/
+}
+
+/* Grid Version */
+/* .card:nth-child(1) {
+    grid-area: one;
+}
+.layout-grid > :nth-child(2) { This also works. Doesn't force you to use class names
+    grid-area: two;
+}
+.card:nth-child(3) {
+    grid-area: three;
+}
+.card:nth-child(4) {
+    grid-area: four;
+} */
+
+.card__title {
+    font-size: var(--fs-600);
+    margin: 0;
+}
+
+.card__img { /* Image is a weird inline-block-ish element. For (margin-left: auto) to work it has to be a block  */
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+.border-teal {
+    border-color: var(--clr-teal);
+}
+.border-red {
+    border-color: var(--clr-red);
+}
+.border-yellow {
+    border-color: var(--clr-yellow);
+}
+.border-blue {
+    border-color: var(--clr-blue);
+}
