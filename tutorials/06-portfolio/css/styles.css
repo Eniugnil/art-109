@@ -73,7 +73,7 @@ header {
 .pfp {
    width: 5rem;
    height: 5rem;
-   background: url(../../images/github-profile-icon.png);
+   background: url(../images/github-profile-icon.png);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -82,7 +82,7 @@ header {
    margin-top: 1rem;
    width: 8rem;
    height: 5rem;
-   background: url(../../images/text.svg);
+   background: url(../images/text.svg);
    background-repeat: no-repeat;
    background-size: 8rem;
    background-position: center;
@@ -100,7 +100,7 @@ header {
 }
 .search-inner-wrapper input[type="search"] {
    width: 100%;
-   background: #fff url(../../images/github-profile-icon.png) 1rem center no-repeat;
+   background: #fff url(../images/github-profile-icon.png) 1rem center no-repeat;
    background-size: 1.7rem;
    padding-inline: 3.25rem 1.6rem;
    border-radius: 8px;
