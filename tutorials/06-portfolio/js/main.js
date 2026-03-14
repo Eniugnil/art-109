@@ -1,7 +1,10 @@
-const hamburger = document.querySelector(".hamburger");
-const menu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  console.log("asd");
-  menu.classList.toggle("active");
-});
+const query = document.querySelector('.query')
+function search(){
+    const url = "https://www.google.com/search?q="+query.value
+    window.open(url,"_self")
+}
+query.addEventListener('keydown',(e)=>{
+    if(e.keyCode === 13){
+      search();
+    }
+})
