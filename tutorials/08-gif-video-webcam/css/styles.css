@@ -1,0 +1,48 @@
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default spacing */
+* {
+   margin: 0;
+   padding: 0;
+}
+
+/* Respect user font settings */
+html {
+  font-size: 100%;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- General CSS ----------  */
+
+.cat-fishing {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.rowing-potato {
+  position: absolute;
+  top: -5%;
+  left: 50px;
+}
+
+.image-text-div {
+  position: relative;
+  margin: 50px auto;
+  height: 30rem;
+  width: 50rem;
+  max-width: 600px;
+  font-size: 3rem;
+  background-color: hsl(215, 83%, 40%);
+}
+
