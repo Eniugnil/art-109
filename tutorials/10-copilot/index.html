@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copilot Demo - Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <h1>Copilot Demo 2 Gallery</h1>
+      <p>An image collection of penguin emotes.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="Close preview">✕</button>
+    <button class="overlay-nav overlay-prev" id="overlayPrev" aria-label="Previous image">←</button>
+    <button class="overlay-nav overlay-next" id="overlayNext" aria-label="Next image">→</button>
+    <img id="overlayImage" alt="Preview image" />
+    <p id="overlayCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
