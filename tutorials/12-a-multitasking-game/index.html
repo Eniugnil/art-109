@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>A Multitasking Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+
+    <!-- Meters -->
+    <div class="status-panel">
+      <div class="meter-group">
+        <label for="tired-meter">Tired Level:</label>
+        <progress id="tired-meter" value="0" max="100"></progress>
+      </div>
+
+      <div class="meter-group">
+        <label for="eyes-meter">Eye Strain:</label>
+        <progress id="eyes-meter" value="0" max="100"></progress>
+      </div>
+
+      <div class="meter-group">
+        <label for="thirst-meter">"Thirst":</label>
+        <progress id="thirst-meter" value="0" max="100"></progress>
+      </div>
+
+      <div class="meter-group">
+        <label for="bored-meter">Boredom:</label>
+        <progress id="bored-meter" value="0" max="100"></progress>
+      </div>
+
+      <div class="meter-group">
+        <label for="workload-meter">Workload:</label>
+        <progress id="workload-meter" value="0" max="100"></progress>
+      </div>
+    </div>
+
+    <!-- Room -->
+    <div class="room">
+      <div class="floor"></div>
+      <div class="wall"></div>
+
+      <div class="prop-container">
+        <div class="window">🪟</div>
+
+        <div class="bed-container">
+          <div class="headboard"></div>
+          <div class="bed">
+            <div class="pillows">
+              <div class="pillow"></div>
+              <div class="pillow"></div>
+            </div>
+            <div class="blanket"></div>
+          </div>
+          <div class="legs">
+            <div class="leg"></div>
+            <div class="leg"></div>
+          </div>
+        </div>
+
+        <div class="desk-container">
+          <div class="headboard-desk"></div>
+          <div class="legs">
+            <div class="desk-leg"></div>
+            <div class="desk-leg"></div>
+          </div>
+          <div class="computer">💻</div>
+          <div class="phone">📱</div>
+          <div id="drink-dialog" class="drink">🥃</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <dialog id="start-screen" class="center instruction-dialog">
+      <h2>A Multitasking Game</h2>
+      <div class="rules-box">
+        <p><strong>Maintaining your meters:</strong></p>
+        <ul>
+          <li>
+            Tired level: Click the bed to lower. Increases the rate all other
+            bars increase by
+          </li>
+          <li>Eye Strain: Hover over the window to rest your eyes.</li>
+          <li>
+            Thirst: Click the drink and click on any green tiles that pop up in
+            the center
+          </li>
+          <li>
+            Boredom: View a post to lower. Permanently increases the
+            minimum tired level.
+          </li>
+          <li>Workload: Click on the computer and copy the numbers</li>
+        </ul>
+      </div>
+      <button class="close_dialog" id="start-game-btn">Start</button>
+    </dialog>
+
+    <!-- Drink -->
+    <dialog class="center water-dialog">
+      <p>Make an "infinite water source"</p>
+      <div class="grid-container">
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+
+        <div class="tile outer"></div>
+        <div class="tile center-tile" data-index="0"></div>
+        <div class="tile center-tile" data-index="1"></div>
+        <div class="tile outer"></div>
+
+        <div class="tile outer"></div>
+        <div class="tile center-tile" data-index="2"></div>
+        <div class="tile center-tile" data-index="3"></div>
+        <div class="tile outer"></div>
+
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+        <div class="tile outer"></div>
+      </div>
+    </dialog>
+
+    <!-- Phone -->
+    <dialog id="phone-dialog" class="center phone-dialog">
+      <div id="phone-content" class="phone-feed">
+        <h3 class="phone-title">Social Media</h3>
+        <div id="feed-list">
+          <div class="feed-item clickable-post">
+            Post #1
+            <div class="feed-subtext">Click to lower boredom</div>
+          </div>
+          <div class="feed-item clickable-post">
+            Post #2
+            <div class="feed-subtext">Click to lower boredom</div>
+          </div>
+          <div class="feed-item clickable-post">
+            Post #3
+            <div class="feed-subtext">Click to lower boredom</div>
+          </div>
+          <div class="feed-item clickable-post">
+            Post #4
+            <div class="feed-subtext">Click to lower boredom</div>
+          </div>
+          <div class="feed-item clickable-post">
+            Post #5
+            <div class="feed-subtext">Click to lower boredom</div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Computer -->
+    <dialog id="computer-dialog" class="center computer-dialog">
+      <h3 class="computer-title">Data Entry</h3>
+      <p class="computer-desc">Copy the numbers into the box below.</p>
+      <p class="computer-desc">Push enter to confirm.</p>
+
+      <div id="work-number-display" class="work-code-box"></div>
+
+      <div class="work">
+        <span class="cell-coordinate"></span>
+        <input
+          type="number"
+          id="work-input"
+          class="work-input"
+          placeholder="Enter number..."
+        />
+      </div>
+      <p id="work-error" class="error-message">
+        Enter the correct numbers in the box above
+      </p>
+    </dialog>
+
+    <!-- Game Over -->
+    <dialog id="game-over-dialog" class="center">
+      <h2>Game Over!</h2>
+      <p id="survival-time-display"></p>
+      <button id="restart-game-btn">Restart Game</button>
+    </dialog>
+
+  </body>
+</html>
